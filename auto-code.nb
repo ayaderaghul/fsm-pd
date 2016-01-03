@@ -335,4 +335,83 @@ BaseStyle->"Graphics"]}, {DiskBox[{0., 0.6578975220566485}, 0.1], InsetBox["\<\"
 BaseStyle->"Graphics"]}}},
 FrameTicks->None,
 GridLinesStyle->Directive[GrayLevel[0.5, 0.4]]]
-Out[37]= x2.png
+Out[37]= x2.pngVertexCircle[{xc_, yc_}, name_, {w_, h_}] := Disk[{xc, yc}, .1];
+alter0Graph =
+   Graph[{-1 -> 6 ,
+Labeled[0 -> 11, "C"] 
+, Labeled[0 -> 3, "D"] 
+, Labeled[1 -> 8, "C"] 
+, Labeled[1 -> 10, "D"] 
+, Labeled[2 -> 9, "C"] 
+, Labeled[2 -> 7, "D"] 
+, Labeled[3 -> 5, "C"] 
+, Labeled[3 -> 8, "D"] 
+, Labeled[4 -> 8, "C"] 
+, Labeled[4 -> 1, "D"] 
+, Labeled[5 -> 0, "C"] 
+, Labeled[5 -> 12, "D"] 
+, Labeled[6 -> 6, "C"] 
+, Labeled[6 -> 2, "D"] 
+, Labeled[7 -> 11, "C"] 
+, Labeled[7 -> 10, "D"] 
+, Labeled[8 -> 6, "C"] 
+, Labeled[8 -> 12, "D"] 
+, Labeled[9 -> 4, "C"] 
+, Labeled[9 -> 6, "D"] 
+, Labeled[10 -> 7, "C"] 
+, Labeled[10 -> 6, "D"] 
+, Labeled[11 -> 8, "C"] 
+, Labeled[11 -> 3, "D"] 
+, Labeled[12 -> 5, "C"] 
+, Labeled[12 -> 2, "D"] 
+     },
+   EdgeShapeFunction -> 
+    GraphElementData["EdgeShapeFunction", "FilledArrow"],
+   VertexStyle -> LightGray,
+   VertexShapeFunction -> VertexCircle,
+   VertexLabels -> {0 -> Placed["C", Center], 1 -> Placed["D", Center], 2 -> Placed["D", Center], 3 -> Placed["D", Center], 4 -> Placed["D", Center], 5 -> Placed["D", Center], 6 -> Placed["D", Center], 7 -> Placed["D", Center], 8 -> Placed["C", Center], 9 -> Placed["C", Center], 10 -> Placed["C", Center], 11 -> Placed["D", Center], 12 -> Placed["C", Center]}
+   ];
+G = Graphics[{White, Disk[{0, 0}, 0.2]}];
+Show[alter0Graph, G]
+(*Export["alter0.png",S]*)
+ 
+VertexCircle[{xc_, yc_}, name_, {w_, h_}] := Disk[{xc, yc}, .1];
+alter1Graph =
+   Graph[{-1 -> 6 ,
+Labeled[0 -> 11, "C"] 
+, Labeled[0 -> 3, "D"] 
+, Labeled[1 -> 8, "C"] 
+, Labeled[1 -> 10, "D"] 
+, Labeled[2 -> 9, "C"] 
+, Labeled[2 -> 7, "D"] 
+, Labeled[3 -> 12, "C"] 
+, Labeled[3 -> 8, "D"] 
+, Labeled[4 -> 8, "C"] 
+, Labeled[4 -> 1, "D"] 
+, Labeled[5 -> 0, "C"] 
+, Labeled[5 -> 12, "D"] 
+, Labeled[6 -> 6, "C"] 
+, Labeled[6 -> 2, "D"] 
+, Labeled[7 -> 11, "C"] 
+, Labeled[7 -> 10, "D"] 
+, Labeled[8 -> 6, "C"] 
+, Labeled[8 -> 12, "D"] 
+, Labeled[9 -> 4, "C"] 
+, Labeled[9 -> 6, "D"] 
+, Labeled[10 -> 7, "C"] 
+, Labeled[10 -> 6, "D"] 
+, Labeled[11 -> 6, "C"] 
+, Labeled[11 -> 3, "D"] 
+, Labeled[12 -> 5, "C"] 
+, Labeled[12 -> 2, "D"] 
+     },
+   EdgeShapeFunction -> 
+    GraphElementData["EdgeShapeFunction", "FilledArrow"],
+   VertexStyle -> LightGray,
+   VertexShapeFunction -> VertexCircle,
+   VertexLabels -> {0 -> Placed["C", Center], 1 -> Placed["C", Center], 2 -> Placed["D", Center], 3 -> Placed["D", Center], 4 -> Placed["D", Center], 5 -> Placed["D", Center], 6 -> Placed["D", Center], 7 -> Placed["D", Center], 8 -> Placed["C", Center], 9 -> Placed["C", Center], 10 -> Placed["C", Center], 11 -> Placed["D", Center], 12 -> Placed["C", Center]}
+   ];
+G = Graphics[{White, Disk[{0, 0}, 0.2]}];
+Show[alter1Graph, G]
+(*Export["alter1.png",S]*)
+ 
