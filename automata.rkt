@@ -60,14 +60,15 @@
                [current2 current2] [payoff2 payoff2]
                [round-results '()])
               ([_ (in-range rounds-per-match)])
+      #:final (> (random) delta)
       (match-define (state a1 v1) (vector-ref table1 current1))
       (match-define (state a2 v2) (vector-ref table2 current2))
       (match-define (cons p1 p2) (payoff a1 a2))
       (define n1 (vector-ref v1 a2))
       (define n2 (vector-ref v2 a1))
       (define round-result (list p1 p2))
-      (values n1 (+ payoff1 (* (expt delta _) p1))
-              n2 (+ payoff2 (* (expt delta _) p2))
+      (values n1 (+ payoff1 (* (- 1 delta) p1))
+              n2 (+ payoff2 (* (- 1 delta) p2))
               (cons round-result round-results))))
   (values (reverse round-results) (automaton new1 c1 p1 table1) (automaton new2 c2 p2 table2)))
 
