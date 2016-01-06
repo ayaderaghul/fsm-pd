@@ -8,19 +8,19 @@
 
 ;; CONFIGURATION
 
-(define lab1-directory "/Users/linhchi.nguyen/Dropbox/fsm-bar/deltas/run2/")
+(define lab1-dir "/Users/linhchi.nguyen/Dropbox/fsm-bar/pd/deltas/run1/")
 
 ;; change the directory of output file here
-(define MEAN "mean")
-(define RANK "rank")
-(define PIC "meanplot")
+(define MEAN (string-append lab1-dir "mean"))
+(define RANK (string-append lab1-dir "rank"))
+(define PIC (string-append lab1-dir "meanplot"))
 
 (define N 100)
 (define P (build-random-population N))
-(define CYCLES 100)
+(define CYCLES 50000)
 (define SPEED 10)
 (define ROUNDS-PER-MATCH 15)
-(define DELTAS (list 0 .3 .6 .7 .8 .9 .95 1))
+(define DELTAS (list 0 1 .95 .7 .9 .3 .6 .8))
 (define MUTATION 1)
 
 ;; UTILITIES
