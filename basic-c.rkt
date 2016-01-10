@@ -9,15 +9,15 @@
 ;; CONFIGURATION
 ;; change the directory of output file here
 
-(define lab1-directory "/Users/linhchi.nguyen/Dropbox/fsm-bar/deltas/run2/")
+(define lab1-dir "/Users/linhchi.nguyen/Documents/")
 
-(define MEAN "mean")
-(define RANK "rank")
-(define PIC "mean.png")
+(define MEAN (string-append lab1-dir "mean"))
+(define RANK (string-append lab1-dir "rank"))
+(define PIC (string-append lab1-dir "mean.png"))
 ;; change the simulation settings here
 (define N 100)
 (define P (build-random-population N))
-(define CYCLES 40000)
+(define CYCLES 50000)
 (define SPEED 10)
 (define ROUNDS-PER-MATCH 300)
 (define DELTA .95)
@@ -45,7 +45,7 @@
 (define (evolve population cycles speed rounds-per-match delta mutation)
   (cond
    [(zero? cycles) '()]
-   [else (define p2 (match-up* population rounds-per-match delta))
+   [else (define p2 (match-up-c population rounds-per-match delta))
          (define pp (population-payoffs p2))
          (define p3 (regenerate p2 speed))
          (mutate* p3 mutation)
