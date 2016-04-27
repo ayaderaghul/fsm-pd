@@ -52,7 +52,7 @@
                            (state DEFECT (vector 1 1)))))
 
 ;; PAIR MATCH
-(define (interact auto1 auto2 rounds-per-match delta)
+(define (interact-c auto1 auto2 rounds-per-match delta)
   (match-define (automaton current1 c1 payoff1 table1) auto1)
   (match-define (automaton current2 c2 payoff2 table2) auto2)
   (define-values (new1 p1 new2 p2 round-results)
@@ -69,6 +69,25 @@
       (define round-result (list p1 p2))
       (values n1 (+ payoff1 (* (- 1 delta) p1))
               n2 (+ payoff2 (* (- 1 delta) p2))
+              (cons round-result round-results))))
+  (values (reverse round-results) (automaton new1 c1 p1 table1) (automaton new2 c2 p2 table2)))
+
+(define (interact-d auto1 auto2 rounds-per-match delta)
+  (match-define (automaton current1 c1 payoff1 table1) auto1)
+  (match-define (automaton current2 c2 payoff2 table2) auto2)
+  (define-values (new1 p1 new2 p2 round-results)
+    (for/fold ([current1 current1] [payoff1 payoff1]
+               [current2 current2] [payoff2 payoff2]
+               [round-results '()])
+              ([_ (in-range rounds-per-match)])
+      (match-define (state a1 v1) (vector-ref table1 current1))
+      (match-define (state a2 v2) (vector-ref table2 current2))
+      (match-define (cons p1 p2) (payoff a1 a2))
+      (define n1 (vector-ref v1 a2))
+      (define n2 (vector-ref v2 a1))
+      (define round-result (list p1 p2))
+      (values n1 (+ payoff1 (* (expt delta _) p1))
+              n2 (+ payoff2 (* (expt delta _) p2))
               (cons round-result round-results))))
   (values (reverse round-results) (automaton new1 c1 p1 table1) (automaton new2 c2 p2 table2)))
 
