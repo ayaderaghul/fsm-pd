@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    106512,       2175]
-NotebookOptionsPosition[      3601,         77]
-NotebookOutlinePosition[    106613,       2177]
-CellTagsIndexPosition[    106570,       2174]
+NotebookDataLength[    107502,       2195]
+NotebookOptionsPosition[      4591,         97]
+NotebookOutlinePosition[    107603,       2197]
+CellTagsIndexPosition[    107560,       2194]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,8 +28,8 @@ Cell[BoxData[
   RowBox[{
    RowBox[{
     RowBox[{"SetDirectory", "[", 
-     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
-   "\[IndentingNewLine]", "\n", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{
@@ -39,11 +39,30 @@ Cell[BoxData[
      RowBox[{
      "racket", " ", "will", " ", "evaluate", " ", "the", " ", "function", " ",
        "`main", " ", "inside", " ", "the", " ", "file", " ", 
-      RowBox[{"side", ".", "rkt", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
+      RowBox[{"side", ".", "rkt", ".", " ", "raco"}], " ", "will", " ", "run",
+       " ", "the", " ", "test", " ", "module", " ", "inside", " ", "the", " ",
+       "file"}], ",", " ", 
+     RowBox[{
+     "usually", " ", "when", " ", "there", " ", "are", " ", "two", " ", 
+      "commands", " ", "to", " ", "be", " ", "run"}], ",", " ", 
+     RowBox[{
+     "and", " ", "none", " ", "of", " ", "which", " ", "can", " ", "be", " ", 
+      "associated", " ", "to", " ", "be", " ", "the", " ", "main", " ", "one",
+       " ", 
+      RowBox[{"(", 
+       RowBox[{
+       "run", " ", "as", " ", "continual", " ", "probability", " ", "or", " ",
+         "run", " ", "as", " ", "discount", " ", "factor"}], ")"}]}], ",", 
+     " ", 
+     RowBox[{
+      RowBox[{"they", "'"}], "d", " ", "be", " ", "defined", " ", "as", " ", 
+      "a", " ", "test", " ", "module"}], ",", " ", 
+     RowBox[{
+     "and", " ", "raco", " ", "is", " ", "to", " ", "run", " ", "such", " ", 
+      "tests"}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"commandstring", "=", "\"\<racket -tm side.rkt\>\""}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"commandstring", "=", "\"\<raco test -s rund basic.rkt\>\""}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"Runs", " ", "the", " ", "string"}], " ", "*)"}], 
    "\[IndentingNewLine]", 
@@ -73,7 +92,8 @@ Cell[BoxData[
    3.6536198454745817`*^9, 3.653619858838455*^9}, {3.653620204245492*^9, 
    3.653620205245576*^9}, {3.6536204260278196`*^9, 3.6536205611329556`*^9}, {
    3.6604806399843597`*^9, 3.6604806469453583`*^9}, {3.6605024866719227`*^9, 
-   3.660502488468546*^9}, {3.6605026170917053`*^9, 3.660502695716313*^9}}]
+   3.660502488468546*^9}, {3.6605026170917053`*^9, 3.660502695716313*^9}, {
+   3.661923027321154*^9, 3.661923110141841*^9}}]
 },
 PrintingStyleEnvironment->"Printout",
 WindowSize->{704, 716},
@@ -2176,7 +2196,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 3040, 55, 240, "Input"]
+Cell[557, 20, 4030, 75, 335, "Input"]
 }
 ]
 *)

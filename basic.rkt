@@ -17,9 +17,9 @@
 ;; change the simulation settings here
 (define N 100)
 (define P (build-random-population N))
-(define CYCLES 40000)
+(define CYCLES 10000)
 (define SPEED 10)
-(define ROUNDS-PER-MATCH 300)
+(define ROUNDS-PER-MATCH 400)
 (define DELTA .95)
 (define MUTATION 1)
 

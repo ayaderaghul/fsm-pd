@@ -8,26 +8,6 @@ racket -tm side.rkt
 
 with -tm and no further specification, racket will evaluate the function `main defined inside the file side.rkt
 
-### how to run in lab 1 computer:
-
-- change the directory for the output into a dropbox folder
-(ie smt like: "/Users/linhchi.nguyen/Dropbox/fsm-bar/run1/mean.png")
-
-```
-(require (file "/Users/linhchi.nguyen/Documents/fsm-bar/main.rkt"))
-
-```
-
-### how to run in disa lab computer:
-- change directory for output:
-"C:/Documents and Settings/linhchi.nguyen/My Documents/Dropbox/fsm-bar/run6/mean"
-
-```
-(require (file "R:/fsm-bar/main.rkt"))
-```
-
-#### extra
-
 ```
 raco test -s five main.rkt 
 ```
@@ -37,8 +17,15 @@ raco test -s five main.rkt
 | To do         | Date          | By    | Note |
 | ------------- |:-------------:| ----- |:----:|
 | spin off from fsm-bar      | 3 jan 16 | chi | |
+| revise !!! added mutation and deltas  | |||
  
 # Acknowledgment
 
-Applied as in [fsm-bar](https://github.com/ayaderaghul/fsm-bar)
+This is a customised version built upon the base code of Matthias Felleisen [here](https://github.com/mfelleisen/sample-fsm)
+
+The initial code of this project received a lot of critical contribution by Hoang Minh Thang. At the early stage, it is from [this paper](http://www.pnas.org/content/109/25/9929.abstract) that we got inspiration for the simulation workflow.
+
+Along the way of the development of this project, the code benefits tremendously from discussions on racket mailing list [here](https://groups.google.com/forum/?hl=en-GB#!topic/racket-users/4o1goSwrLHA), IRC #racket [here](http://pastebin.com/sxrCnwRV) and StackExchange.
+
+The file "csv.rkt" has external copyright condition which can be found in its own file.
 
