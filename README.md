@@ -47,6 +47,9 @@ auto-code.nb và run-in-matha.nb: Tệp notebook của Mathematica, có thể d�
 
 mean100.png và mean2.png: Hình ảnh biểu diễn kết quả mô phỏng. 
 
+# Youtube talk: 6th racketCon (1,4K views)
+
+https://youtu.be/KZ_YnOFkVx0?si=LINBYkiLOCEotFDM
 
 # Acknowledgment
 
